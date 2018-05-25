@@ -47,15 +47,33 @@ ul {
     margin-bottom: 2em;
     background:rgb(16, 48, 48);
     color:white;
-    font-size: 1.8em;
+    font-size: 1.4em;
     
 }
 
-.life-container {
+
+
+.in-container {
     background:darkslategray;
+    margin-bottom: 10px;
     padding:.5em;
-    font-weight:bold;
-    cursor:pointer;
+    cursor: context-menu;
+    text-align: left;
+}
+
+.out-container {
+  background:darkslategray;
+  text-decoration: line-through;
+  margin-bottom: 10px;
+  padding:.5em;
+  cursor: context-menu;
+  text-align: left;
+  color: rgb(16, 48, 48);
+}
+
+i{
+  cursor: pointer;
+  
 }
 
 .col {
@@ -69,6 +87,13 @@ ul {
     padding: .4em 1.3em;
 }
 
+.fa-trash-alt:hover{
+color: darkred;
+}
+
+.fa-pencil-alt:hover{
+  color:yellowgreen;
+}
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: darkslategray;
@@ -98,4 +123,63 @@ ul {
   width:50%;
   padding:10px;
   box-sizing: border-box;
+}
+
+.fa-square:hover{
+  font-weight: bold;
+}
+.fa-check-square:hover{
+  font-weight: lighter;
+}
+
+input[name="editor"]{
+  border: 0;
+  margin:0;
+  font-size: 1em;
+  background:rgb(16, 48, 48);
+  color:white;
+  padding:.5em;
+  
+}
+
+@media(max-width: 768px){
+
+  #boxes .box{
+    float:none;
+
+    width:100%;
+  }
+
+
+}
+
+@media(max-width: 475px){
+
+  #boxes .box{
+    float:none;
+
+    width:100%;
+  }
+
+  .addlist h1{
+    margin-top:25px;
+    font-size:25px;
+    margin-bottom:5px;
+  }
+
+  .addlist p{
+    font-size:10px;
+  }
+
+  input[type="text"]{
+    border: 0;
+    padding: 1em;
+    width: 60%;
+    margin-bottom: 2em;
+    background:rgb(16, 48, 48);
+    color:white;
+    font-size: 1em;
+    
+}
+
 }
