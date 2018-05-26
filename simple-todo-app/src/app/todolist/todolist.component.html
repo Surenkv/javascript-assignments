@@ -19,7 +19,7 @@
  <span id="{{item}}" ><i  class="far fa-trash-alt" (click)="removeItem(i)" style="float:right;margin-right:10px;"></i><i  class="fas fa-pencil-alt" *ngIf="!onState" (click)="editItem(i,item)" style="float:right;margin-right:10px;"></i>{{ item }}</span>
 <span *ngIf="editState && itemToEdit==i"><input type="text" name="editor" #edits value="{{item}}" /><i  class="far fa-save" (click)="updateItem(edits.value,i)" style="float:right;margin-right:10px;"></i></span>
 </div>
-<div class="out-container" *ngFor="let doneitem of doneitems;let j = index"><i class="far fa-square" (click)="moveDoneItem(j)" style="margin-right:10px;"></i>
+<div class="out-container" *ngFor="let doneitem of doneitems;let j = index"><i class="far fa-check-square" (click)="moveDoneItem(j)" style="margin-right:10px;"></i>
   
   <span id="{{doneitem}}" ><i  class="far fa-trash-alt" (click)="removedoneItem(j)" style="float:right;margin-right:10px;"></i><i  class="fas fa-pencil-alt" *ngIf="!onState" (click)="editdoneItem(j,doneitem)" style="float:right;margin-right:10px;"></i>{{ doneitem }}</span>
  <span *ngIf="doneEditState && doneItemtoEdit==j"><input type="text" name="editor" #doneedits value="{{doneitem}}" /><i  class="far fa-save" (click)="updatedoneItem(doneedits.value,j)" style="float:right;margin-right:10px;"></i></span>
