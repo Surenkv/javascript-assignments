@@ -3,6 +3,10 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 By Surendhar on 26/5/2018
 
+# App Link ( Cross Brower Compatible and Device Compatible)
+
+https://surenkv.github.io/todo/
+
 # Description
 
 A simple to do list with CRUD Functionality and is Serverless so that it could operate in client end without any backend support.
@@ -17,4 +21,4 @@ A simple to do list with CRUD Functionality and is Serverless so that it could o
 
 4.Use Delete icon to Delete Your tasks
 
-# ******************************************************************************************************#
+# ***********************************************************#
