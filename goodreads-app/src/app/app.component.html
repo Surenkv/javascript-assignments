@@ -1,12 +1,18 @@
-<div class="container">
-  <h1>Goodreads App</h1>
-  <input  type="text" class="form-control" [(ngModel)]="bookSearch" (keyup.enter)="searchBooks()"/>
-  <div>
-  <div class="books-container" *ngFor='let book of books | paginate: {itemsPerPage: 10, currentPage:pageNumber, id: "1"}; let i = index'>
-      <h3 class="book-title">{{ book.title }}</h3>
-      <h4 class="book-author">{{ book.author }}</h4>
-      <h4 class="book-author">{{ book.rating }}</h4>
-      <div class="book-img"><img [src]='book.imgUrl' /></div>
+<div class="container" style="margin:20px;">
+  <h1>Goodreads App</h1><br>
+  <input  type="text" class="form-control" placeholder="Enter Book , Author Name And Hit Enter To Search"  [(ngModel)]="bookSearch" (keyup.enter)="searchBooks()"/>
+  <br>
+  <hr>
+<div class="row">
+  <div class="card-deck" style="padding:1em;margin:1.8em;" *ngFor='let book of books | paginate: {itemsPerPage: 10, currentPage:pageNumber, id: "1"}; let i = index'>
+      <div class="card" style="width: 10rem;">
+          <img class="card-img-top" [src]='book.imgUrl'  alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title">{{ book.title }}</h6>
+            <p class="card-text">{{ book.author }}</p>
+            <p href="#" class="btn btn-primary">{{ book.rating }}</p>
+          </div>
+        </div> 
   </div>
 </div>
   <pagination-controls (pageChange)="pageNumber = $event" id="1" maxSize="5" directionLinks="true" autoHide="true"></pagination-controls>

@@ -32,8 +32,9 @@ export class AppComponent implements OnInit {
           book.rating = result.average_rating;
           book.id = best_book.id;
           book.title = best_book.title;
-          book.imgUrl = best_book.small_image_url;
-          book.author = best_book.author.name;
+          book.imgUrl = best_book.image_url;
+          const author = best_book.author[0];
+          book.author = author.name;
         }
         this.books.push(book);
       }
