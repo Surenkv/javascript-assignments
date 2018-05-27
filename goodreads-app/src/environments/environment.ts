@@ -4,5 +4,10 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  goodreadsInfo : {
+    key: '3xdQDEZ5adNQFFsHX12K1Q',
+    secret: '8Bmnkz3AuUQz5vEiibktUmnrNSIQsmpqJfDK21DBI',
+    url: 'https://www.goodreads.com/search/index.xml'
+  }
 };
