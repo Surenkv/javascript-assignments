@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { AppComponent } from './app.component';
-
+import { BookService } from './services/book.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     NgxPaginationModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
