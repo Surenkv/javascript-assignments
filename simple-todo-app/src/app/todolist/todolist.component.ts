@@ -43,6 +43,13 @@ newTask:string;
     }
  
   }
+  getItem(){
+    return this.items;
+  }
+
+  getDoneItem(){
+    return this.doneitems;
+  }
 
   removeItem(i) {
     this.items.splice(i,1);
@@ -67,7 +74,6 @@ editItem(itemIndex,item){
   var e = document.getElementById(item);
   e.parentNode.removeChild(e);
   this.itemToEdit=itemIndex;
-
 }
 
 updateItem(updatedItem,i){
@@ -89,9 +95,5 @@ updatedoneItem(updateddoneItem,j){
 this.doneitems[j]=updateddoneItem+" ";
 this.doneEditState=false;
 }
-
-  ngOnInit() {
-
-  }
-
+  ngOnInit() { }
 }
